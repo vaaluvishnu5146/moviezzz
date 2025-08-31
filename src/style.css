@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+}
+
+/* .montserrat-100 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+} */
