@@ -4,6 +4,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./style.css";
 
 import { createTheme, ThemeProvider } from "flowbite-react";
+import { Provider } from "react-redux";
+import store from "./store/store.js";
+import { ToastContainer } from "react-toastify";
 
 const customTheme = createTheme({
   button: {
@@ -18,9 +21,12 @@ const customTheme = createTheme({
 });
 
 createRoot(document.getElementById("root")).render(
-  <ThemeProvider theme={customTheme}>
-    <Router>
-      <App />
-    </Router>
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider theme={customTheme}>
+      <Router>
+        <App />
+        <ToastContainer />
+      </Router>
+    </ThemeProvider>
+  </Provider>
 );
